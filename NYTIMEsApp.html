@@ -3,6 +3,11 @@
 <head>
 	<title></title>
 	<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<style>
+		.inputBox{
+			width: 100%;
+		}
+	</style>
 </head>
 <body>
 	<div class="container">
@@ -15,6 +20,19 @@
 					<div class="panel-heading glyphicon glyphicon-calendar"> Search Parameters</div>
 					<div class="panel-body">
 						<form>
+							Search Term: <br>
+							<input type = "text" class="inputBox searchTerm">
+							<br>
+							Number of Records to Retrieve:<br>
+							<input type = "text" class="inputBox recordNum"><br>
+							Start Year(Optional):<br>
+							<input type = "text" class="inputBox startYear"><br>
+							End Year(Optional):<br>
+							<input type = "text" class="inputBox endYear">
+							<br><br>
+							<input type = "submit" value = "Search" id="submitButton">
+
+							<input type = "submit" value = "Clear Results" id="clearButton">
 						</form>
 					</div>
 				</div>
