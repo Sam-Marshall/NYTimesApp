@@ -32,21 +32,20 @@
 				<div class="panel">
 					<div class="panel-heading glyphicon glyphicon-calendar"> Search Parameters</div>
 					<div class="panel-body">
-						<form>
+						<form name="NYTimesApp">
 
 							Search Term: <br>
-							<input type = "text" class="inputBox searchTerm">
+							<input type = "text" class="inputBox searchTerm" value="">
 							<br>
 							Number of Records to Retrieve:<br>
-							<input type ="text" class="inputBox recordNum"><br>
+							<input type ="text" class="inputBox recordNum" value=""><br>
 							Start Year(Optional):<br>
 							<input type ="text" class="inputBox startYear"><br>
 							End Year(Optional):<br>
 							<input type ="text" class="inputBox endYear">
 							<br><br>
-							<input type ="submit" value ="Search" id="submitButton">
-
-							<input type ="submit" value ="Clear Results" id="clearButton">
+							<button type ="submit" class = "btn glyphicon glyphicon-search" id= "submitButton">Search</button>
+                            <button type = "submit" class= "btn glyphicon glyphicon-trash" id = "clearButton"> Clear Results</button>
 						</form>
 					</div>
 				</div>
@@ -64,5 +63,33 @@
 		</div>
 
 	</div>
+	<script src="http://code.jquery.com/jquery-2.1.3.min.js"></script>
+	<script type="text/javascript">
+
+	window.onload = function(){
+
+		$("#submitButton").on('click', function(event){
+			event.preventDefault();
+			var searchTermInput = $(".searchTerm").val();
+			console.log(searchTermInput);
+			var numberOfRecords = $(".recordNum").val();
+			console.log(numberOfRecords);
+			var startYearSearch = $(".startYear").val();
+			console.log(startYearSearch);
+			var endYearSearch = $(".endYear").val();
+			console.log(endYearSearch);
+
+			document.NYTimesApp.submit();
+
+
+		});
+		$("#clearButton").on('click', function(event){
+			event.preventDefault();
+
+
+		});		
+	}
+
+	</script>
 </body>
 </html>
