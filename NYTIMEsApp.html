@@ -6,6 +6,19 @@
 	<style>
 		.inputBox{
 			width: 100%;
+			height: 35px;
+			margin: 5px;
+		}
+		.jumbotron, .panel-heading{
+			background-color: #003366 !important;
+			color: white !important;
+		}
+		.panel-heading{
+			display: block;
+			font-size: 20px !important;
+		}
+		.jumbotron{
+			font-size: 48px !important;
 		}
 	</style>
 </head>
@@ -20,19 +33,20 @@
 					<div class="panel-heading glyphicon glyphicon-calendar"> Search Parameters</div>
 					<div class="panel-body">
 						<form>
+
 							Search Term: <br>
 							<input type = "text" class="inputBox searchTerm">
 							<br>
 							Number of Records to Retrieve:<br>
-							<input type = "text" class="inputBox recordNum"><br>
+							<input type ="text" class="inputBox recordNum"><br>
 							Start Year(Optional):<br>
-							<input type = "text" class="inputBox startYear"><br>
+							<input type ="text" class="inputBox startYear"><br>
 							End Year(Optional):<br>
-							<input type = "text" class="inputBox endYear">
+							<input type ="text" class="inputBox endYear">
 							<br><br>
-							<input type = "submit" value = "Search" id="submitButton">
+							<input type ="submit" value ="Search" id="submitButton">
 
-							<input type = "submit" value = "Clear Results" id="clearButton">
+							<input type ="submit" value ="Clear Results" id="clearButton">
 						</form>
 					</div>
 				</div>
